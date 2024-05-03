@@ -1,0 +1,12 @@
+*branch_name.txt*	Providing current branch name.
+
+This is a Vim/Neovim plugin providing the current branch name.
+
+==============================================================================
+FUNCTION                                                *branch_name-function*
+
+                                       *branch_name#get_current_branch_name()*
+branch_name#get_current_branch_name()
+		Returns the current branch name.
+
+vim: ft=help tw=78 et ts=2 sw=2 sts=2 norl

@@ -23,7 +23,7 @@ function! s:get_dirname(gitdir) abort
     return ''
   endif
 
-  let l:ret = fnamemodify(a:gitdir, ":t")
+  let l:ret = fnamemodify(a:gitdir, ":h:t")
   return l:ret
 endfunction
 

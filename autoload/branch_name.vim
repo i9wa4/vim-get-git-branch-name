@@ -12,8 +12,9 @@ function! branch_name#get_current_repo_root_name() abort
 endfunction
 
 
-function! s:find_git_dir(fullpath) abort
-  let l:gitdir = finddir('.git', escape(a:fullpath, ' ') . ';', 1)
+function! s:find_git_dir(path) abort
+  let l:fullpath = fnamemodify(a:path, ':p')
+  let l:gitdir = finddir('.git', escape(l:fullpath, ' ') . ';', 1)
   return l:gitdir
 endfunction
 
@@ -23,7 +24,7 @@ function! s:get_dirname(gitdir) abort
     return ''
   endif
 
-  let l:ret = fnamemodify(a:gitdir, ":h:t")
+  let l:ret = fnamemodify(a:gitdir, ':p:h:h:t')
   return l:ret
 endfunction
 

@@ -9,4 +9,8 @@ FUNCTION                                                *branch_name-function*
 branch_name#get_current_branch_name()
 		Returns the current branch name.
 
+                                    *branch_name#get_current_repo_root_name()*
+branch_name#get_current_repo_root_name()
+		Returns the current repository root name.
+
 vim: ft=help tw=78 et ts=2 sw=2 sts=2 norl

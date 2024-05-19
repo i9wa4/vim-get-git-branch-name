@@ -14,7 +14,7 @@ endfunction
 
 function! s:find_git_dir(path) abort
   let l:fullpath = fnamemodify(a:path, ':p')
-  let l:gitdir = finddir('.git', escape(l:fullpath, ' ') . ';', 1)
+  let l:gitdir = finddir('.git', escape(l:fullpath, ' ') .. ';', 1)
   return l:gitdir
 endfunction
 

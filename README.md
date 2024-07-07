@@ -1,4 +1,4 @@
-# get-git-branch-name.vim
+# vim-get-git-branch-name
 
 This is a Vim/Neovim plugin providing the current branch name.
 

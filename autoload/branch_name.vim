@@ -13,6 +13,10 @@ endfunction
 
 
 function! s:find_git_dir(path) abort
+  if empty(&buftype)
+    return ''
+  endif
+
   let l:fullpath = fnamemodify(a:path, ':p')
   let l:gitdir = finddir('.git', escape(l:fullpath, ' ') .. ';', 1)
   return l:gitdir

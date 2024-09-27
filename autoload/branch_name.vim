@@ -13,7 +13,7 @@ endfunction
 
 
 function! s:find_git_dir(path) abort
-  if empty(&buftype)
+  if !empty(&buftype)
     return ''
   endif
 
